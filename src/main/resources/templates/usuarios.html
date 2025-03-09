@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuarios</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Usuarios Registrados</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${usuarios.isEmpty()}">
+            <td colspan="3">No hay usuarios registrados</td>
+        </tr>
+        <tr th:each="usuario : ${usuarios}">
+            <td th:text="${usuario.id}"></td>
+            <td th:text="${usuario.nombre}"></td>
+            <td th:text="${usuario.apellidos}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/formulario">Registrar un nuevo usuario</a>
+</div>
+</body>
+</html>
+
+
+

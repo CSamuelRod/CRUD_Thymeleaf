@@ -1,0 +1,102 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente general */
+    background-color: #eaeaea; /* Color de fondo */
+    margin: 0; /* Sin margen */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Títulos */
+h2 {
+    color: #4A90E2; /* Color azul */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para los formularios */
+form {
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Etiquetas de los campos */
+label {
+    display: block; /* Cada etiqueta ocupa su propia línea */
+    margin: 10px 0 5px; /* Margen superior e inferior */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #4A90E2; /* Borde azul */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Botón de envío */
+button {
+    background-color: #4A90E2; /* Color de fondo azul */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición para el hover */
+}
+
+button:hover {
+    background-color: #357ABD; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsar bordes */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+th, td {
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-bottom: 1px solid #ccc; /* Borde inferior gris claro */
+}
+
+th {
+    background-color: #4A90E2; /* Fondo azul para encabezados */
+    color: white; /* Color del texto blanco */
+}
+
+/* Mensaje en caso de no haber usuarios */
+tr th:empty {
+    text-align: center; /* Centrar el mensaje */
+}
+
+/* Enlace de regreso */
+a {
+    color: #4A90E2; /* Color azul */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Mostrar como bloque */
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px; /* Margen superior */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+/* Estilo para la advertencia de no usuarios */
+tr th:empty {
+    color: #999; /* Color gris para el mensaje de vacío */
+}

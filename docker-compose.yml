@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Sandia4you
+      MYSQL_DATABASE: presentacion # Base de datos inicial.
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Script de inicialización, si es necesario.
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db # Espera a que el contenedor de MySQL esté listo.
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/presentacion?useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Sandia4you
+
+volumes:
+  db-data:

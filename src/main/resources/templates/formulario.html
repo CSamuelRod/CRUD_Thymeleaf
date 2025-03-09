@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css"> <!-- Enlazamos el archivo CSS -->
+</head>
+<body>
+<div class="container"> <!-- Contenedor principal -->
+  <h2>Formulario de Registro</h2>
+  <form th:action="@{/registrar}" method="post" th:object="${usuario}">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" th:field="*{nombre}" required>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" th:field="*{apellidos}" required>
+
+    <button type="submit">Registrar</button>
+  </form>
+  <a href="/usuarios">Ver lista de usuarios</a> <!-- Enlace para ver la lista de usuarios -->
+</div>
+</body>
+</html>
