@@ -25,7 +25,7 @@ public class UsuarioController {
     // Maneja las peticiones GET a "/formulario"
     @GetMapping("/formulario")
     public String mostrarFormulario(Model model) {
-        // Añade un nuevo objeto Usuario al modelo
+        // Agrega un atributo al modelo para que esté disponible en la vista Thymeleaf.
         model.addAttribute("usuario", new Usuario());
         // Devuelve la vista "formulario"
         return "formulario";
