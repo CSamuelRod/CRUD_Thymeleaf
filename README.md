@@ -34,18 +34,3 @@ CSS	Estilos visuales para la interfaz
 ✅ Eliminar usuarios
 
 ✅ Visualizar detalles individuales
-
-
-src/
- ├─ main/
- │   ├─ java/
- │   │    └─ com.example.crudthymeleaf/
- │   │         ├─ controller/    # Controladores web
- │   │         ├─ model/         # Entidad User
- │   │         ├─ repository/    # Interfaces JPA
- │   │         └─ service/       # Lógica de negocio
- │   ├─ resources/
- │       ├─ static/css/          # Archivos CSS
- │       ├─ templates/           # Vistas Thymeleaf (.html)
- │       └─ application.properties # Configuración de Spring y MySQL
-
